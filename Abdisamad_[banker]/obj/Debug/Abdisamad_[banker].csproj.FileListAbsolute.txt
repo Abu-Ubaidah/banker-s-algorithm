@@ -1,0 +1,14 @@
+C:\Users\Qudrus\source\repos\Abdisamad_[banker]\Abdisamad_[banker]\bin\Debug\Abdisamad_[banker].exe.config
+C:\Users\Qudrus\source\repos\Abdisamad_[banker]\Abdisamad_[banker]\bin\Debug\Abdisamad_[banker].exe
+C:\Users\Qudrus\source\repos\Abdisamad_[banker]\Abdisamad_[banker]\bin\Debug\Abdisamad_[banker].pdb
+C:\Users\Qudrus\source\repos\Abdisamad_[banker]\Abdisamad_[banker]\obj\Debug\Abdisamad_[banker].csprojAssemblyReference.cache
+C:\Users\Qudrus\source\repos\Abdisamad_[banker]\Abdisamad_[banker]\obj\Debug\Abdisamad_[banker].csproj.CoreCompileInputs.cache
+C:\Users\Qudrus\source\repos\Abdisamad_[banker]\Abdisamad_[banker]\obj\Debug\Abdisamad_[banker].exe
+C:\Users\Qudrus\source\repos\Abdisamad_[banker]\Abdisamad_[banker]\obj\Debug\Abdisamad_[banker].pdb
+C:\Users\Qudrus\Desktop\Abdisamad_[banker]\Abdisamad_[banker]\bin\Debug\Abdisamad_[banker].exe.config
+C:\Users\Qudrus\Desktop\Abdisamad_[banker]\Abdisamad_[banker]\bin\Debug\Abdisamad_[banker].exe
+C:\Users\Qudrus\Desktop\Abdisamad_[banker]\Abdisamad_[banker]\bin\Debug\Abdisamad_[banker].pdb
+C:\Users\Qudrus\Desktop\Abdisamad_[banker]\Abdisamad_[banker]\obj\Debug\Abdisamad_[banker].csprojAssemblyReference.cache
+C:\Users\Qudrus\Desktop\Abdisamad_[banker]\Abdisamad_[banker]\obj\Debug\Abdisamad_[banker].csproj.CoreCompileInputs.cache
+C:\Users\Qudrus\Desktop\Abdisamad_[banker]\Abdisamad_[banker]\obj\Debug\Abdisamad_[banker].exe
+C:\Users\Qudrus\Desktop\Abdisamad_[banker]\Abdisamad_[banker]\obj\Debug\Abdisamad_[banker].pdb
