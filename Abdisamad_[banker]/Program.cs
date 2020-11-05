@@ -13,13 +13,19 @@ namespace Abdisamad__banker_
         static void Main(string[] args)
         {
             string fileNAme = "";
-            Console.WriteLine("".PadLeft(6) + "Bnker's Algoritm for multiple Resource Allocation");
-            Console.WriteLine("".PadLeft(6) + "=================================================");
-            Console.Write("".PadLeft(4) + "Enter Resource size: ");
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("".PadLeft(7) + "Bnker's Algoritm for multiple Resource Allocation");
+            Console.WriteLine("".PadLeft(7) + "=================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.Write("".PadLeft(5) + "Enter Resource size: ");
             var resourceSize = Convert.ToInt32(Console.ReadLine());
-            Console.Write("".PadLeft(4) + "Enter Process size: ");
+            Console.WriteLine(" ");
+            Console.Write("".PadLeft(5) + "Enter Process size: ");
             var procesSize = Convert.ToInt32(Console.ReadLine());
             //Console.Write(" Enter I to get input data from a file or press any key for random data: ");
+            Console.WriteLine(" ");
             Console.Write(" Enter the file name (with .txt extension): ");
             fileNAme = Console.ReadLine();
             var path = Path.Combine(Directory.GetCurrentDirectory(), fileNAme);
@@ -43,7 +49,7 @@ namespace Abdisamad__banker_
             {
                 resources[i] = Convert.ToInt32(stringNumbers[i]);
             }
-           
+            Console.WriteLine(" ");
             Console.Write("resources: ");
             for (int i = 0; i < resourceSize; i++)
             {
@@ -59,13 +65,22 @@ namespace Abdisamad__banker_
             }
             Console.WriteLine();
 
-            Console.WriteLine("Max matrix claim: ");
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("".PadLeft(5) + "Max matrix claim: ");
+            Console.WriteLine(" ");
             displayMatrix(procesSize, resourceSize, max);
-        
-            Console.WriteLine("allocation matrix claim: ");
+
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("".PadLeft(5) + "allocation matrix claim: ");
+            Console.WriteLine(" ");
             displayMatrix(procesSize, resourceSize, allocation);
 
-            Console.WriteLine("Need matrix claim: ");
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("".PadLeft(5) + "Need matrix claim: ");
+            Console.WriteLine(" ");
             for (int i = 0; i < procesSize; i++)
             {
                
@@ -76,11 +91,9 @@ namespace Abdisamad__banker_
                 }
             }
             displayMatrix(procesSize, resourceSize, need);
-
-            Console.Write("Vector available: ");
-          
-            
-
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("".PadLeft(4) + "available Vector: ");
             int r = 0;
             for (int i = 0; i < resourceSize; i++)
             {
@@ -92,12 +105,16 @@ namespace Abdisamad__banker_
                 VectorAvailable[i] = resources[i] - sumResources[i];
                
             }
-
+            Console.Write("".PadLeft(2));
             for (int i = 0; i < resourceSize; i++)
             {
-                Console.Write("R{0}= {1} ", i, VectorAvailable[i]);
+                Console.Write("".PadLeft(2) + "R{0} = {1} ", i, VectorAvailable[i]);
+                if (i != resourceSize - 1)
+                    Console.Write(",");
             }
-            Console.WriteLine();
+           
+            Console.WriteLine(" ");
+   
 
             isSafe(procesSize, resourceSize, VectorAvailable, need, safeSequence, allocation,max);
 
@@ -145,6 +162,7 @@ namespace Abdisamad__banker_
                 for (int j = 0; j < resourceSize; j++)
                 {
                     Console.Write("".PadLeft(2)+arrayName[i, j]);
+                    
                 }
                 Console.WriteLine();
             }
@@ -190,6 +208,8 @@ namespace Abdisamad__banker_
                             {
                                 work[j] = work[j] + allocation[i, j];
                             }
+                            Console.WriteLine(" ");
+                       
                             Console.WriteLine("iteration #{0}", count);
                             for (j = 0; j < resourceSize; j++)
                             {
@@ -207,23 +227,35 @@ namespace Abdisamad__banker_
                             {
                                 need[i, j] = 0;
                             }
-                            Console.WriteLine("Max matrix claim: ");
+                            Console.WriteLine(" ");
+                            Console.WriteLine("".PadLeft(5) + "Max matrix claim: ");
+                            Console.WriteLine(" ");
                             displayMatrix(procesSize, resourceSize, max);
-                            Console.WriteLine("Allocation matrix claim: ");
+                            Console.WriteLine(" ");
+                            Console.WriteLine(" ");
+                            Console.WriteLine("".PadLeft(5) + "Allocation matrix claim: ");
+                            Console.WriteLine(" ");
                             displayMatrix(procesSize, resourceSize, allocation);
-                            Console.WriteLine("Needed matrix claim: ");
+                            Console.WriteLine(" ");
+                            Console.WriteLine(" ");
+                            Console.WriteLine("".PadLeft(5) + "Needed matrix claim: ");
+                            Console.WriteLine(" ");
                             displayMatrix(procesSize, resourceSize, need);
-                            Console.Write("Vector available: ");
+                            Console.WriteLine(" ");
+                           
+                            Console.WriteLine("".PadLeft(4) + "available Vector: ");                         
+                            Console.Write("".PadLeft(2));                         
                             for (j = 0; j < resourceSize; j++)
                             {
-                                Console.Write("R{0}={1}",j,work[j]);
+                                Console.Write("".PadLeft(2) + "R{0} = {1}",j,work[j]);
                                 if (j != resourceSize - 1)
-                                    Console.Write(", ");
+                                    Console.Write(",");
                             }
                             Console.WriteLine();
 
                         }
                     }
+                    Console.WriteLine(" ");
 
                 }
                 if (flag == false)
@@ -232,21 +264,26 @@ namespace Abdisamad__banker_
                 }
                
             }
+
             if (count < procesSize)
             {
                 Console.WriteLine("The system is unsfa state");
             }
             else
             {
-                Console.WriteLine("Following is safe state sequence: ");
-                Console.Write("<");
+                Console.WriteLine("".PadLeft(2)+"The esource allocation has been completed within {0} iterations!r: ",count);
+                Console.WriteLine("".PadLeft(1)+ "The Safe - state orde: ");
+
+                Console.WriteLine(" ");
+                Console.WriteLine(" ");
+                Console.Write("  < ");
                 for (int i = 0; i < procesSize; i++)
                 {
                     Console.Write("P{0}", safeSequence[i]);
                     if (i != procesSize - 1)
                         Console.Write(", ");
                 }
-                Console.Write(">");
+                Console.Write(" >");
             }
 
         }
