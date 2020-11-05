@@ -50,17 +50,19 @@ namespace Abdisamad__banker_
                 resources[i] = Convert.ToInt32(stringNumbers[i]);
             }
             Console.WriteLine(" ");
-            Console.Write("resources: ");
+            Console.Write("Resources: ");
             for (int i = 0; i < resourceSize; i++)
             {
                 Console.Write("R{0}= {1} ", i, resources[i]);
+                if (i != resourceSize - 1)
+                    Console.Write(", ");
             }
             Console.WriteLine();
-            Console.Write("process: ");
-            for (int i = 0; i < resourceSize; i++)
+            Console.Write("Process: ");
+            for (int i = 0; i < procesSize; i++)
             {
                 Console.Write("p{0}", i);
-                if (i != resourceSize - 1)
+                if (i != procesSize - 1)
                     Console.Write(", ");
             }
             Console.WriteLine();
